@@ -32,7 +32,9 @@ class App extends Component {
                     onChangeText = {this.handleChangeText} 
                     checkBoxValue = {this.state.showStock} 
                     onSelectCheckBox = {this.handleCheckBox} />
-        <StocksDisplay stocks = {this.props.stocks} showInStock = {this.state.showStock} />
+        <StocksDisplay stocks = {this.props.stocks} 
+                       showInStock = {this.state.showStock} 
+                       searchText = {this.state.search} />
       </div>
     );
   }

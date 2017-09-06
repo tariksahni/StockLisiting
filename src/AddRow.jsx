@@ -13,8 +13,8 @@ class AddRow extends Component {
         <div className = "App">
             <div className = "row">
                 <Row>
-                    <Col xs='6'>{title}</Col>  
-                    <Col xs ='6'>{this.props.content.price}</Col>  
+                    <Col xs='6' className = "rowTitle">{title}</Col>  
+                    <Col xs ='6' className = "rowPrice">{this.props.content.price}</Col>  
                  </Row>
             </div>    
         </div>

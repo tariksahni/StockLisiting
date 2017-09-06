@@ -14,20 +14,23 @@ class StocksDisplay extends Component {
     let existingCategory = '' ; 
     let views = [] ;
     this.props.stocks.map( stock => {
+        
+        if( ( this.props.showInStock && !stock.stocked ) || ( stock.name.indexOf(this.props.searchText) === -1 ) )
+            return ;
 
-        if(this.props.showInStock && !stock.stocked)return ;
-
-        if( stock.category !== existingCategory ){
+        if( stock.category !== existingCategory){
             views.push( < AddCategory title = {stock.category} />)
         }
+
         views.push( < AddRow  content = {stock} />)
         existingCategory = stock.category ;
+
     });
     return (
         <div className = "App">
             <Row>
-                <Col xs='6' className = "nameHeading">NAME</Col>  
-                <Col xs ='6' className = " priceHeading ">PRICE</Col>  
+                <Col xs='6' className = "nameHeading"> NAME </Col>  
+                <Col xs ='6' className = " priceHeading "> PRICE </Col>  
            </Row>
            {views}
         </div>

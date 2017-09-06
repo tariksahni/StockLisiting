@@ -41,6 +41,15 @@ h1.mainHeading{
   font-size : 24px;
   text-decoration: underline;
 }
+
+Col.rowPrice{
+  font-size: 25px;
+}
+
+Col.rowTitle{
+  font-size: 25px;
+}
+
 .outOfStock{
   color: red ;
 }
