@@ -6,11 +6,11 @@ class AddCategory extends Component {
     super(props);
     this.state = {} ;
   }
+
   render() {
-    
     return (
-        <div className = "App">
-            <div className = "category">
+        <div className = "App" >
+            <div className = "category" >
                 {this.props.title}
             </div>   
         </div>

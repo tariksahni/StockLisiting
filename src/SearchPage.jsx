@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import { Col, Row } from 'react-bootstrap';
+import './App.css';
 
 class SearchPage extends Component {
   constructor(props) {
     super(props);
+
     this.handleSearch = this.handleSearch.bind(this);
     this.handleCheckBox = this.handleCheckBox.bind(this);
-  
   }
 
   handleSearch (event) {
@@ -17,10 +18,9 @@ class SearchPage extends Component {
     this.props.onSelectCheckBox(event.target.checked)
   }
   render() {
-    
     return (
-      <div className= "searchContainer">
-        <form className = "search">
+      <div className= "searchContainer" >
+        <form className = "search" >
             <input className = "searchInput" placeholder = "Search Item" value = {this.props.searchValue} onChange = {this.handleSearch} />
             <div className = "checkBox">
               <Row>

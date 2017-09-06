@@ -10,6 +10,7 @@ class StocksDisplay extends Component {
     super(props);
     this.state = {} ;
   }
+
   render() {
     let existingCategory = '' ; 
     let views = [] ;
@@ -27,11 +28,12 @@ class StocksDisplay extends Component {
 
     });
     return (
-        <div className = "App">
+        <div className = "App" >
             <Row>
                 <Col xs='6' className = "nameHeading"> NAME </Col>  
                 <Col xs ='6' className = " priceHeading "> PRICE </Col>  
            </Row>
+           <hr />
            {views}
         </div>
     );

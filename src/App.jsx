@@ -26,8 +26,8 @@ class App extends Component {
   render() {
     console.log(this.state.showStock)
     return (
-      <div className="App">
-        <h1 className = "mainHeading">STOCKS</h1>
+      <div className="App" >
+        <h1 className = "mainHeading" > STOCKS </h1>
         <SearchPage searchValue = {this.state.search} 
                     onChangeText = {this.handleChangeText} 
                     checkBoxValue = {this.state.showStock} 
