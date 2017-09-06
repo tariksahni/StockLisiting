@@ -14,6 +14,9 @@ class StocksDisplay extends Component {
     let existingCategory = '' ; 
     let views = [] ;
     this.props.stocks.map( stock => {
+
+        if(this.props.showInStock && !stock.stocked)return ;
+
         if( stock.category !== existingCategory ){
             views.push( < AddCategory title = {stock.category} />)
         }

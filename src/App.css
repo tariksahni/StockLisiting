@@ -1,10 +1,10 @@
 .App{
-  margin : 50px;
+  margin : 45px;
   text-align: center;
 }
 
 h1.mainHeading{
-  font-size: 58px;
+  font-size: 53px;
 
 }
 
@@ -14,7 +14,7 @@ h1.mainHeading{
 }
 
 .searchInput{
-  margin : 10px;
+  margin : 7px;
   width : 50%;
   border-radius: 15px ;
   outline:  none ;
@@ -24,21 +24,21 @@ h1.mainHeading{
 }
 
 .checkBox{
-  font-size: 20px;
+  font-size: 17px;
 }
 
 .nameHeading{
-   font-size: 35px;
+   font-size: 30px;
    color: grey;
 }
 
 .priceHeading{
-  font-size: 35px;
+  font-size: 30px;
   color : grey ;
 }
 
 .category{
-  font-size : 28px;
+  font-size : 24px;
   text-decoration: underline;
 }
 .outOfStock{
