@@ -6,10 +6,6 @@ import AddRow from './AddRow.jsx';
 
 
 class StocksDisplay extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {} ;
-  }
 
   render() {
     let existingCategory = '' ; 

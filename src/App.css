@@ -43,12 +43,13 @@ h1.mainHeading{
   text-decoration: underline;
 }
 
-Col.rowPrice{
-  font-size: 25px;
+Col.rowPrice p {
+  font-size: 20px;
 }
 
-Col.rowTitle{
-  font-size: 25px;
+Col.rowTitle p {
+  
+  font-size: 20px;
 }
 
 .outOfStock{

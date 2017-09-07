@@ -3,20 +3,15 @@ import { Col, Row } from 'react-bootstrap';
 import './App.css';
 
 class SearchPage extends Component {
-  constructor(props) {
-    super(props);
 
-    this.handleSearch = this.handleSearch.bind(this);
-    this.handleCheckBox = this.handleCheckBox.bind(this);
-  }
-
-  handleSearch (event) {
+  handleSearch = (event) => {
     this.props.onChangeText(event.target.value) ;
   }
 
-  handleCheckBox (event) {
+  handleCheckBox = (event) => {
     this.props.onSelectCheckBox(event.target.checked)
   }
+  
   render() {
     return (
       <div className= "searchContainer" >

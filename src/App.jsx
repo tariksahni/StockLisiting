@@ -4,27 +4,22 @@ import SearchPage from './SearchPage.jsx';
 import StocksDisplay from './StocksDisplay.jsx';
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      search : '' ,
-      showStock : false 
-    } ;
+  
+  state = {
+    search : '' ,
+    showStock : false 
+  } ;
 
-    this.handleChangeText =this.handleChangeText.bind(this);
-    this.handleCheckBox =this.handleCheckBox.bind(this);
-  }
-
-  handleChangeText ( newText ) {
+  handleChangeText = ( newText ) => {
     this.setState ( { search: newText } ) ;
   }
 
-  handleCheckBox (showStock) {
+  handleCheckBox = (showStock) => {
     this.setState ( {showStock : showStock } ) ;
   }
 
   render() {
-    console.log(this.state.showStock)
+    console.log(this.state)
     return (
       <div className="App" >
         <h1 className = "mainHeading" > STOCKS </h1>

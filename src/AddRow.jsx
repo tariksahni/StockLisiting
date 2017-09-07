@@ -3,11 +3,6 @@ import { Col, Row } from 'react-bootstrap';
 import './App.css';
 
 class AddRow extends Component {
-    constructor(props) {
-    super(props);
-    this.state = {} ;
-  }
-
   render() {
     let title = this.props.content.stocked ? (<p className = "inStock">{this.props.content.name} </p>) : (<p className = "outOfStock">{this.props.content.name} </p>)
     return (
