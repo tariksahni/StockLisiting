@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Col, Row } from 'react-bootstrap';
-import './App.css';
-import AddCategory from './AddCategory.jsx';
-import AddRow from './AddRow.jsx';
+import '../App.css';
+import AddCategory from '../components/AddCategory.jsx';
+import AddRow from '../components/AddRow.jsx';
 
 
 class StocksDisplay extends Component {
@@ -10,9 +10,9 @@ class StocksDisplay extends Component {
 
     componentWillReceiveProps= ( nextProps ) => { 
         let existingCategory = '' ; 
-        let newStock = nextProps.stocks[0];
+        let newStock = nextProps.stocks.updateProducts[0];
         newStock.map( stock => {
-            
+           
             if( ( nextProps.showInStock && !stock.stocked ) || ( stock.name.indexOf(nextProps.searchText) === -1 ) )
                 return ;
 

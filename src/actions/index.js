@@ -1,9 +1,8 @@
-// action constants 
-export const UPDATE_PRODUCTS = 'UPDATE_PRODUCTS' ;
+import { createAction } from 'redux-actions';
 
-// action creators
-export const uploadProducts = (products) => {
-  return { type: UPDATE_PRODUCTS
-         , products }
-}
+const UPDATE_PRODUCTS = 'UPDATE_PRODUCTS' ;
+
+
+export const updateProducts = createAction ( UPDATE_PRODUCTS ) ;
+
 

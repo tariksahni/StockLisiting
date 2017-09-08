@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Col, Row } from 'react-bootstrap';
-import './App.css';
+import '../App.css';
 
 class AddRow extends Component {
   render() {

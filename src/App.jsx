@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
-import SearchPage from './SearchPage.jsx';
-import StocksDisplay from './StocksDisplay.jsx';
+import SearchPage from './components/SearchPage.jsx';
+import StocksDisplay from './containers/StocksDisplay.jsx';
 import {connect} from 'react-redux';
 import data from './data.js';
-import {uploadProducts} from './actions/index.js'
+import {updateProducts} from './actions/index.js'
 
 class App extends Component {
 
@@ -14,7 +14,7 @@ class App extends Component {
   } ;
 
   componentWillMount = () => {
-    this.props.dispatch((uploadProducts(data)));
+    this.props.updateProducts(data);
   };
   
   handleChangeText = ( newText ) => {
@@ -42,18 +42,17 @@ class App extends Component {
 }
 
 const mapStateToProps = state => {
-  
   return {
     products : state 
   }
 }
 
-// const mapDispatchToProps = dispatch => {
-//   return {
-//     updateProducts : (data) => {
-//       dispatch(uploadProducts)
-//     }
-//   }
-// }
+const mapDispatchToProps = dispatch => {
+  return {
+    updateProducts : (data) => {
+      dispatch(updateProducts(data))
+    }
+  }
+}
 
-export default connect( mapStateToProps )( App ) ;
+export default connect( mapStateToProps , mapDispatchToProps )( App ) ;
