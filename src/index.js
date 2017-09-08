@@ -4,7 +4,16 @@ import './index.css';
 import App from './App.jsx';
 import registerServiceWorker from './registerServiceWorker';
 import data from './data.js';
+import { createStore } from 'redux'
+import { Provider } from 'react-redux'
+import reducer from './reducers/index.js'
 
+const store = createStore(reducer) ; 
 
-ReactDOM.render(<App stocks= {data} />, document.getElementById('root'));
+ReactDOM.render(
+    <Provider store={store}>
+        <App />
+    </Provider>,
+    document.getElementById('root')
+)
 registerServiceWorker();
