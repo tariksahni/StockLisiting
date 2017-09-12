@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Col, Row } from 'react-bootstrap';
 import '../App.css';
 import AddCategory from '../components/AddCategory.jsx';
 import AddRow from '../components/AddRow.jsx';
@@ -32,13 +31,13 @@ class StocksDisplay extends Component {
 
     render() {
         return (
-            <div className = "App" >
-                <Row>
-                    <Col xs='6' className = "nameHeading"> NAME </Col>  
-                    <Col xs ='6' className = " priceHeading "> PRICE </Col>  
-            </Row>
-            <hr />
-            {this.views}
+            <div className = "App">
+                <div className = "namePriceRow" >
+                    <div  className = "nameHeading"> NAME </div>  
+                    <div  className = " priceHeading "> PRICE </div>
+                </div>    
+                <hr />
+                {this.views}
             </div>
         );
     }
