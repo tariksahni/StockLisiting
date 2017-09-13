@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { Col, Row } from 'react-bootstrap';
-import './App.css';
+import '../App.css';
 
 class AddRow extends Component {
   render() {
@@ -8,10 +7,8 @@ class AddRow extends Component {
     return (
         <div className = "App" >
             <div className = "row" >
-                <Row>
-                    <Col xs='6' className = "rowTitle"> {title} </Col>  
-                    <Col xs ='6' className = "rowPrice"> {this.props.content.price} </Col>  
-                 </Row>
+                <div  className = "col"> {title} </div>  
+                <div className = "col"> {this.props.content.price} </div>  
             </div>    
         </div>
     );

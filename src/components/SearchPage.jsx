@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { Col, Row } from 'react-bootstrap';
-import './App.css';
+import '../App.css';
 
 class SearchPage extends Component {
 
@@ -18,11 +17,9 @@ class SearchPage extends Component {
         <form className = "search" >
             <input className = "searchInput" placeholder = "Search Item" value = {this.props.searchValue} onChange = {this.handleSearch} />
             <div className = "checkBox">
-              <Row>
-                <Col>
-                  <p className = "checkBox"> <input type="checkbox"  checked = {this.props.checkBoxValue} onChange = { this.handleCheckBox} /> &nbsp; &nbsp;     Only show products in stock   </p>
-                </Col>  
-              </Row>
+              <p className = "checkBox"> <input type="checkbox"  checked = {this.props.checkBoxValue} onChange = { this.handleCheckBox} /> 
+                &nbsp; &nbsp;     Only show products in stock   
+              </p> 
             </div>
         </form>    
       </div>

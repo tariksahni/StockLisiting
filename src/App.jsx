@@ -1,15 +1,22 @@
 import React, { Component } from 'react';
 import './App.css';
-import SearchPage from './SearchPage.jsx';
-import StocksDisplay from './StocksDisplay.jsx';
+import SearchPage from './components/SearchPage.jsx';
+import StocksDisplay from './containers/StocksDisplay.jsx';
+import {connect} from 'react-redux';
+import data from './data.js';
+import {updateProducts} from './actions/index.js'
 
 class App extends Component {
-  
+
   state = {
     search : '' ,
     showStock : false 
   } ;
 
+  componentWillMount = () => {
+    this.props.updateProducts(data);
+  };
+  
   handleChangeText = ( newText ) => {
     this.setState ( { search: newText } ) ;
   }
@@ -19,7 +26,6 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.state)
     return (
       <div className="App" >
         <h1 className = "mainHeading" > STOCKS </h1>
@@ -27,12 +33,28 @@ class App extends Component {
                     onChangeText = {this.handleChangeText} 
                     checkBoxValue = {this.state.showStock} 
                     onSelectCheckBox = {this.handleCheckBox} />
-        <StocksDisplay stocks = {this.props.stocks} 
-                       showInStock = {this.state.showStock} 
-                       searchText = {this.state.search} />
+        <div className = "displayContainer" >            
+          <StocksDisplay stocks = {this.props.products} 
+                        showInStock = {this.state.showStock} 
+                        searchText = {this.state.search} />
+        </div>               
       </div>
     );
   }
 }
 
-export default App ;
+const mapStateToProps = state => {
+  return {
+    products : state 
+  }
+}
+
+const mapDispatchToProps = dispatch => {
+  return {
+    updateProducts : (data) => {
+      dispatch(updateProducts(data))
+    }
+  }
+}
+
+export default connect( mapStateToProps , mapDispatchToProps )( App ) ;
